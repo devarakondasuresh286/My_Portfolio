@@ -1,0 +1,49 @@
+.experience {
+  padding: 60px 20px;
+  background: #fff;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-list {
+  width: 100%;
+  max-width: 700px;
+}
+
+.experience-item {
+  background: #f3f3f3;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.experience-item h3 {
+  margin: 0 0 5px 0;
+}
+
+.experience-item p {
+  margin: 0 0 10px 0;
+  color: #555;
+}
+
+.experience-item span {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.experience-item ul {
+  margin: 10px 0 0 20px;
+}
+
+.experience-item li {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
