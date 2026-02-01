@@ -1,0 +1,40 @@
+.education {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.education-list {
+  width: 100%;
+  max-width: 700px;
+}
+
+.education-item {
+  background: #f3f3f3;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.education-item h3 {
+  margin: 0 0 5px 0;
+}
+
+.education-item p {
+  margin: 0 0 10px 0;
+  color: #555;
+}
+
+.education-item span {
+  font-size: 0.95rem;
+  color: #888;
+}
