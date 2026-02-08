@@ -8,8 +8,11 @@ import Education from './Education.jsx';
 import Projects from './Projects.jsx';
 import Skills from './Skills.jsx';
 import Contact from './Contact.jsx';
+import ScrollButton from './ScrollButton.jsx';
 
-
+/**
+ * Main App component - renders the complete portfolio with navigation and sections
+ */
 function App() {
   const aboutRef = useRef(null);
 
@@ -39,8 +42,23 @@ function App() {
         </div>
       </nav>
       <section className="hero" id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Suresh. Explore my work, experience, and skills. Scroll down to know more about me!</p>
+        <div className="hero-container">
+          <div className="hero-left">
+            <p className="hero-greeting">Hi, I'm Suresh</p>
+            <h1 className="hero-subtitle">Software Engineer & Web Developer</h1>
+            <p className="hero-description">Transforming ideas into elegant solutions through code</p>
+            <div className="hero-actions">
+              <a className="hero-btn primary" href="#contact">Hire Me</a>
+              <a className="hero-btn secondary" href="#contact">Contact Us</a>
+            </div>
+          </div>
+          <div className="hero-right">
+            <div className="profile-image-container">
+              <img src="/images/profile.png" alt="Suresh" className="profile-image" />
+            </div>
+          </div>
+        </div>
+        <ScrollButton targetId="about-me" />
       </section>
       <div ref={aboutRef}>
         <AboutMe />

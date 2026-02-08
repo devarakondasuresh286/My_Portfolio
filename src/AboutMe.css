@@ -1,19 +1,92 @@
 .about-me {
-  padding: 60px 20px;
-  background: #f9f9f9;
+  padding: 100px 40px 80px 40px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .about-me h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #22223b;
+  font-weight: 700;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .about-me p {
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.8;
+  color: #4a4e69;
+}
+
+.highlight-frontend {
+  color: #61dafb;
+  font-weight: 600;
+}
+
+.highlight-backend {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.highlight-database {
+  color: #51cf66;
+  font-weight: 600;
+}
+
+.highlight-skill {
+  color: #ffa94d;
+  font-weight: 600;
+}
+
+.decorative-bar {
+  width: 100%;
+  max-width: 800px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #667eea 20%, #764ba2 50%, #667eea 80%, transparent 100%);
+  margin: 2.5rem auto 0;
+  opacity: 0.6;
+}
+
+.why-work-title {
+  font-size: 2rem;
+  color: #4a9eff;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.why-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.why-work-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+  color: #4a4e69;
+  text-align: left;
+}
+
+.why-work-item .checkmark {
+  color: #4a9eff;
   font-size: 1.2rem;
-  max-width: 600px;
-  text-align: center;
+  font-weight: bold;
+  flex-shrink: 0;
 }

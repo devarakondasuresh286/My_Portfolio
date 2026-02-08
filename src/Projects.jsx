@@ -1,6 +1,10 @@
 import React from "react";
 import "./Projects.css";
+import ScrollButton from "./ScrollButton.jsx";
 
+/**
+ * Projects component - showcases completed projects and portfolio work
+ */
 function Projects() {
   return (
     <section className="projects" id="projects">
@@ -15,6 +19,7 @@ function Projects() {
           <p>A simple todo list application using React Hooks and local storage.</p>
         </div>
       </div>
+      <ScrollButton targetId="skills" />
     </section>
   );
 }

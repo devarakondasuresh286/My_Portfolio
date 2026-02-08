@@ -1,6 +1,10 @@
 import React from "react";
 import "./Experience.css";
+import ScrollButton from "./ScrollButton.jsx";
 
+/**
+ * Experience component - displays work experience and internships
+ */
 function Experience() {
   return (
     <section className="experience" id="experience">
@@ -26,6 +30,7 @@ function Experience() {
           </ul>
         </div>
       </div>
+      <ScrollButton targetId="education" />
     </section>
   );
 }

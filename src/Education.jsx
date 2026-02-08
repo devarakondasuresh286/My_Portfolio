@@ -1,6 +1,10 @@
 import React from "react";
 import "./Education.css";
+import ScrollButton from "./ScrollButton.jsx";
 
+/**
+ * Education component - displays academic background and qualifications
+ */
 function Education() {
   return (
     <section className="education" id="education">
@@ -17,6 +21,7 @@ function Education() {
           <span>2018 - 2020</span>
         </div>
       </div>
+      <ScrollButton targetId="projects" />
     </section>
   );
 }

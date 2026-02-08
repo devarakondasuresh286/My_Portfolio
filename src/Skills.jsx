@@ -1,6 +1,10 @@
 import React from "react";
 import "./Skills.css";
+import ScrollButton from "./ScrollButton.jsx";
 
+/**
+ * Skills component - lists technical skills and competencies
+ */
 function Skills() {
   return (
     <section className="skills" id="skills">
@@ -12,6 +16,7 @@ function Skills() {
         <li>Git & GitHub</li>
         <li>Node.js (Basics)</li>
       </ul>
+      <ScrollButton targetId="contact" />
     </section>
   );
 }

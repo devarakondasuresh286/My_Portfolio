@@ -1,6 +1,9 @@
 import React from "react";
 import "./Contact.css";
 
+/**
+ * Contact component - provides a contact form for visitors to reach out
+ */
 function Contact() {
   return (
     <section className="contact" id="contact">
