@@ -106,6 +106,36 @@ function App() {
           <div className="star"></div>
           <div className="star"></div>
           <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
         </div>
         <div className="hero-container">
           <div className="hero-left">
@@ -116,7 +146,7 @@ function App() {
             </div>
             <p className="hero-description">Transforming ideas into elegant solutions through code</p>
             <div className="hero-actions">
-              <a className="hero-btn primary" href="#contact">Hire Me</a>
+              <a className="hero-btn primary" href="#contact">Download CV</a>
               <a className="hero-btn secondary" href="#contact">Contact Me</a>
             </div>
             <div className="social-links">
@@ -139,7 +169,7 @@ function App() {
           </div>
           <div className="hero-right">
             <div className="profile-image-container">
-              <img src="/images/profile.png" alt="Suresh" className="profile-image" />
+              <img src="/image (3).png" alt="Suresh" className="profile-image" />
             </div>
           </div>
         </div>
