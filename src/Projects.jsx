@@ -9,19 +9,19 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce application with user authentication, shopping cart, and payment integration.",
-      image: "/images/project1.jpg",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
-      liveDemo: "#",
+      title: "NestChange",
+      description: "A modern web application designed to simplify workflows, featuring responsive UI, real-time interactions, and scalable backend integration.",
+      image: "/images/NestChange.png",
+      technologies: ["JavaScript", "HTML", "CSS", "PHP", "SQL"],
+      liveDemo: "https://nestchange-production-5182.up.railway.app/",
       github: "#"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      title: "About the People",
+      description: "A news posting website where fresh content is published regularly. I developed this website and also worked as a team member in building and maintaining it.",
       image: "/images/project2.jpg",
-      technologies: ["React", "Spring Boot", "MySQL", "WebSocket"],
+      technologies: ["React", "JavaScript", "HTML", "CSS"],
       liveDemo: "#",
       github: "#"
     },
@@ -29,7 +29,7 @@ function Projects() {
       id: 3,
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website showcasing projects, skills, and professional experience with smooth animations.",
-      image: "/images/project3.jpg",
+      image: "/images/portfolio.png",
       technologies: ["React", "Vite", "CSS3", "JavaScript"],
       liveDemo: "#",
       github: "#"

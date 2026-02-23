@@ -251,6 +251,105 @@ body {
   animation: fadeInUp 1s ease-out;
 }
 
+.hero-tech-visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.hero-gradient-blob {
+  display: none;
+}
+
+.hero-gradient-blob.blob-1 {
+  width: 220px;
+  height: 220px;
+  top: 2%;
+  left: 8%;
+  background: radial-gradient(circle at 30% 30%, #ff6b81, #5b0f1a 70%);
+  animation-delay: 0s;
+}
+
+.hero-gradient-blob.blob-2 {
+  width: 200px;
+  height: 200px;
+  top: 28%;
+  right: 5%;
+  background: radial-gradient(circle at 30% 30%, #ff4d6d, #3b0b12 72%);
+  animation-delay: -4s;
+}
+
+.hero-gradient-blob.blob-3 {
+  width: 240px;
+  height: 240px;
+  bottom: 2%;
+  left: 22%;
+  background: radial-gradient(circle at 35% 35%, #d7263d, #2a070c 72%);
+  animation-delay: -8s;
+}
+
+
+.hero-floating-logos {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+}
+
+.hero-logo-node {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  animation: logoDrift 12s ease-in-out infinite;
+  will-change: transform;
+  transition: transform 0.25s ease;
+}
+
+.hero-logo-node:hover {
+  animation-play-state: paused;
+  transform: translateY(-4px) scale(1.07);
+}
+
+.hero-logo-node.skill-node:nth-child(1) { top: 4%; left: 2%; animation-delay: -0.2s; }
+.hero-logo-node.skill-node:nth-child(2) { top: 10%; left: 34%; animation-delay: -1.2s; }
+.hero-logo-node.skill-node:nth-child(3) { top: 7%; left: 80%; animation-delay: -2.1s; }
+.hero-logo-node.skill-node:nth-child(4) { top: 34%; left: 8%; animation-delay: -3.3s; }
+.hero-logo-node.skill-node:nth-child(5) { top: 44%; left: 52%; animation-delay: -4.4s; }
+.hero-logo-node.skill-node:nth-child(6) { top: 66%; left: 18%; animation-delay: -5.1s; }
+.hero-logo-node.skill-node:nth-child(7) { top: 76%; left: 72%; animation-delay: -6.2s; }
+
+.hero-skill-logo {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.22));
+}
+
+@keyframes logoDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(24px, -22px, 0);
+  }
+  50% {
+    transform: translate3d(-28px, 18px, 0);
+  }
+  75% {
+    transform: translate3d(22px, 24px, 0);
+  }
+}
+
 .profile-image-container {
   position: relative;
   width: 400px;
@@ -495,7 +594,7 @@ body {
   display: flex;
   gap: 2.5rem;
   margin-top: 2rem;
-  animate: fadeInUp 1.3s ease-out;
+  animation: fadeInUp 1.3s ease-out;
 }
 
 .social-link {

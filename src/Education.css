@@ -1,6 +1,6 @@
 .education {
-  padding: 80px 40px;
-  background: radial-gradient(circle at top, #1b2233 0%, #0f141f 55%, #0b0f18 100%);
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #4d0000 100%);
   min-height: 60vh;
   display: flex;
   flex-direction: column;
@@ -25,10 +25,10 @@
 }
 
 .education-item {
-  background: linear-gradient(140deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
   border-radius: 16px;
   padding: 26px 28px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   animation: fadeInUp 0.8s ease-out;
@@ -36,8 +36,8 @@
 
 .education-item:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(10, 20, 40, 0.55);
-  border-color: rgba(90, 217, 202, 0.5);
+  box-shadow: 0 18px 40px rgba(255, 214, 90, 0.25);
+  border-color: rgba(255, 214, 90, 0.45);
 }
 
 .education-year {
@@ -46,8 +46,8 @@
   margin-bottom: 10px;
   padding: 4px 12px;
   border-radius: 999px;
-  background: rgba(90, 217, 202, 0.18);
-  color: #7ff0da;
+  background: rgba(255, 214, 90, 0.16);
+  color: #ffd65a;
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -61,7 +61,7 @@
 
 .education-item p {
   margin: 0;
-  color: #c7ccda;
+  color: #b0b0b0;
   font-size: 1rem;
 }
 
