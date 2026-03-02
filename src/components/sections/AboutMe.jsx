@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutMe.css";
-import ScrollButton from "./ScrollButton.jsx";
+import ScrollButton from "../common/ScrollButton.jsx";
 
 /**
  * AboutMe component - displays personal introduction and skills highlights

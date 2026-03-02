@@ -1,6 +1,6 @@
 import React from "react";
 import "./Education.css";
-import ScrollButton from "./ScrollButton.jsx";
+import ScrollButton from "../common/ScrollButton.jsx";
 
 /**
  * Education component - displays academic background and qualifications

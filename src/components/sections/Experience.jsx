@@ -1,6 +1,6 @@
 import React from "react";
 import "./Experience.css";
-import ScrollButton from "./ScrollButton.jsx";
+import ScrollButton from "../common/ScrollButton.jsx";
 
 /**
  * Experience component - displays work experience with animated vertical timeline

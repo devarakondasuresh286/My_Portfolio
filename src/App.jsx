@@ -1,20 +1,25 @@
 
 import React, { useEffect, useRef, useState } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 
-import AboutMe from './AboutMe.jsx';
-import Experience from './Experience.jsx';
-import Education from './Education.jsx';
-import Projects from './Projects.jsx';
-import Skills from './Skills.jsx';
-import Contact from './Contact.jsx';
-import ScrollButton from './ScrollButton.jsx';
+import AboutMe from './components/sections/AboutMe.jsx';
+import Experience from './components/sections/Experience.jsx';
+import Education from './components/sections/Education.jsx';
+import Projects from './components/sections/Projects.jsx';
+import Skills from './components/sections/Skills.jsx';
+import Contact from './components/sections/Contact.jsx';
+import ScrollButton from './components/common/ScrollButton.jsx';
+import SkillDetailPage from './pages/SkillDetailPage.jsx';
 
 /**
  * Main App component - renders the complete portfolio with navigation and sections
  */
-function App() {
+function PortfolioHome() {
   const aboutRef = useRef(null);
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [isTranslating, setIsTranslating] = useState(false);
+  const [isTranslatorReady, setIsTranslatorReady] = useState(false);
 
   const heroSkills = [
     {
@@ -91,18 +96,115 @@ function App() {
   }, [displayedText, isDeleting, currentRoleIndex, typingSpeed, roles]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > window.innerHeight * 0.7 && aboutRef.current) {
-        aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-        window.removeEventListener('scroll', handleScroll);
+    const targetSection = sessionStorage.getItem("scroll-target");
+    if (!targetSection) {
+      return;
+    }
+
+    sessionStorage.removeItem("scroll-target");
+    setTimeout(() => {
+      document.getElementById(targetSection)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  }, []);
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("portfolio-language");
+    if (savedLanguage) {
+      setSelectedLanguage(savedLanguage);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.googleTranslateElementInit = () => {
+      if (window.google?.translate?.TranslateElement) {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "bg,hr,cs,da,nl,en,et,fi,fr,de,el,hu,ga,it,lv,lt,mt,pl,pt,ro,sk,sl,es,sv",
+            autoDisplay: false
+          },
+          "google_translate_element"
+        );
+        setIsTranslatorReady(true);
       }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    if (!document.querySelector('script[src*="translate.google.com/translate_a/element.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.body.appendChild(script);
+    } else if (window.google?.translate?.TranslateElement) {
+      window.googleTranslateElementInit();
+    }
   }, []);
+
+  const setGoogleTranslateCookie = (languageCode) => {
+    const translationValue = `/en/${languageCode}`;
+    document.cookie = `googtrans=${translationValue};path=/`;
+    if (window.location.hostname && window.location.hostname !== "localhost") {
+      document.cookie = `googtrans=${translationValue};path=/;domain=.${window.location.hostname}`;
+    }
+  };
+
+  const forceReloadTranslation = (languageCode) => {
+    sessionStorage.setItem("portfolio-force-translate", languageCode);
+    window.location.reload();
+  };
+
+  const applyGoogleTranslateLanguage = (languageCode, retryCount = 0) => {
+    setGoogleTranslateCookie(languageCode);
+    const googleCombo = document.querySelector(".goog-te-combo");
+
+    if (googleCombo) {
+      googleCombo.value = languageCode;
+      googleCombo.dispatchEvent(new Event("change", { bubbles: true }));
+      setTimeout(() => setIsTranslating(false), 900);
+      return;
+    }
+
+    if (retryCount < 15) {
+      setTimeout(() => applyGoogleTranslateLanguage(languageCode, retryCount + 1), 200);
+    } else {
+      setIsTranslating(false);
+      forceReloadTranslation(languageCode);
+    }
+  };
+
+  useEffect(() => {
+    const forcedLanguage = sessionStorage.getItem("portfolio-force-translate");
+    if (forcedLanguage && forcedLanguage === selectedLanguage) {
+      sessionStorage.removeItem("portfolio-force-translate");
+    }
+  }, [selectedLanguage]);
+
+  useEffect(() => {
+    if (!isTranslatorReady) {
+      return;
+    }
+
+    setIsTranslating(true);
+    localStorage.setItem("portfolio-language", selectedLanguage);
+    document.documentElement.lang = selectedLanguage;
+    applyGoogleTranslateLanguage(selectedLanguage);
+  }, [selectedLanguage, isTranslatorReady]);
+
+  const handleLanguageChange = (event) => {
+    const languageCode = event.target.value;
+    setSelectedLanguage(languageCode);
+  };
+
+  const handleContactClick = (event) => {
+    event.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <div>
+      <div id="google_translate_element" className="google-translate-element"></div>
       <nav className="navbar">
         <div className="brand">Suresh</div>
         <div className="nav-links">
@@ -113,6 +215,46 @@ function App() {
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
+          <select
+            className="language-select notranslate"
+            value={selectedLanguage}
+            onChange={handleLanguageChange}
+            disabled={isTranslating || !isTranslatorReady}
+            aria-label="Select language"
+            translate="no"
+          >
+            <option value="bg" translate="no">Bulgarian</option>
+            <option value="hr" translate="no">Croatian</option>
+            <option value="cs" translate="no">Czech</option>
+            <option value="da" translate="no">Danish</option>
+            <option value="nl" translate="no">Dutch</option>
+            <option value="en" translate="no">English</option>
+            <option value="et" translate="no">Estonian</option>
+            <option value="fi" translate="no">Finnish</option>
+            <option value="fr" translate="no">French</option>
+            <option value="de" translate="no">German</option>
+            <option value="el" translate="no">Greek</option>
+            <option value="hu" translate="no">Hungarian</option>
+            <option value="ga" translate="no">Irish</option>
+            <option value="it" translate="no">Italian</option>
+            <option value="lv" translate="no">Latvian</option>
+            <option value="lt" translate="no">Lithuanian</option>
+            <option value="mt" translate="no">Maltese</option>
+            <option value="pl" translate="no">Polish</option>
+            <option value="pt" translate="no">Portuguese</option>
+            <option value="ro" translate="no">Romanian</option>
+            <option value="sk" translate="no">Slovak</option>
+            <option value="sl" translate="no">Slovenian</option>
+            <option value="es" translate="no">Spanish</option>
+            <option value="sv" translate="no">Swedish</option>
+          </select>
+          <span
+            className={`language-status notranslate ${isTranslating ? "visible" : ""}`}
+            aria-live="polite"
+            translate="no"
+          >
+            {isTranslating ? "Translating..." : ""}
+          </span>
         </div>
       </nav>
       <section className="hero" id="home">
@@ -171,14 +313,14 @@ function App() {
         <div className="hero-container">
           <div className="hero-left">
             <h5 className="hero-main-heading">Hi, I'm Suresh</h5>
-            <div className="typing-wrapper">
+            <div className="typing-wrapper notranslate" translate="no">
               <span className="typing-text">{displayedText}</span>
               <span className="cursor">|</span>
             </div>
             <p className="hero-description">Transforming ideas into elegant solutions through code</p>
             <div className="hero-actions">
               <a className="hero-btn primary" href="#contact">Download CV</a>
-              <a className="hero-btn secondary" href="#contact">Contact Me</a>
+              <a className="hero-btn secondary" href="#contact" onClick={handleContactClick}>Contact Me</a>
             </div>
             <div className="social-links">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link linkedin" title="LinkedIn">
@@ -225,6 +367,16 @@ function App() {
       <Skills />
       <Contact />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<PortfolioHome />} />
+      <Route path="/skills/:skillId" element={<SkillDetailPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 

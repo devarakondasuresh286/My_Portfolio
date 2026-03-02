@@ -64,6 +64,7 @@
   cursor: pointer;
   position: relative;
   min-height: 130px;
+  text-decoration: none;
 }
 
 .skill-card:hover {

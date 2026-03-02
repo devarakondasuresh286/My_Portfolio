@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Skills.css";
-import ScrollButton from "./ScrollButton.jsx";
+import ScrollButton from "../common/ScrollButton.jsx";
 
 /**
  * Skills component - lists technical skills and competencies
@@ -12,6 +13,7 @@ function Skills() {
       skills: [
         { 
           name: "HTML", 
+          slug: "html",
           logo: (
             <svg viewBox="0 0 100 100" className="skill-logo">
               <path fill="#E34C26" d="M20 10L15 90L50 100L85 90L80 10Z"/>
@@ -22,6 +24,7 @@ function Skills() {
         },
         { 
           name: "CSS", 
+          slug: "css",
           logo: (
             <svg viewBox="0 0 100 100" className="skill-logo">
               <path fill="#264DE4" d="M20 10L15 90L50 100L85 90L80 10Z"/>
@@ -32,6 +35,7 @@ function Skills() {
         },
         { 
           name: "JavaScript", 
+          slug: "javascript",
           logo: (
             <svg viewBox="0 0 100 100" className="skill-logo">
               <rect fill="#F1DB4F" width="100" height="100" rx="10"/>
@@ -41,6 +45,7 @@ function Skills() {
         },
         { 
           name: "React", 
+          slug: "react",
           logo: (
             <svg viewBox="0 0 100 100" className="skill-logo">
               <circle cx="50" cy="50" r="40" fill="none" stroke="#61DAFB" strokeWidth="3"/>
@@ -58,6 +63,7 @@ function Skills() {
       skills: [
         { 
           name: "Java", 
+          slug: "java",
           logo: (
             <svg viewBox="0 0 100 100" className="skill-logo">
               <path fill="#007396" d="M35 70c-5 0-8-3-8-8v-30c0-5 3-8 8-8h30c5 0 8 3 8 8v30c0 5-3 8-8 8H35z"/>
@@ -68,11 +74,32 @@ function Skills() {
         },
         { 
           name: "Spring Boot", 
+          slug: "spring-boot",
           logo: (
             <svg viewBox="0 0 100 100" className="skill-logo">
               <circle cx="50" cy="50" r="38" fill="none" stroke="#6DB33F" strokeWidth="3"/>
               <path fill="#6DB33F" d="M50 20c-16.6 0-30 13.4-30 30s13.4 30 30 30 30-13.4 30-30-13.4-30-30-30zm0 55c-13.8 0-25-11.2-25-25s11.2-25 25-25 25 11.2 25 25-11.2 25-25 25z"/>
               <path fill="#6DB33F" d="M50 35c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"/>
+            </svg>
+          )
+        },
+        {
+          name: "Node.js",
+          slug: "node-js",
+          logo: (
+            <svg viewBox="0 0 100 100" className="skill-logo">
+              <polygon fill="#3C873A" points="50,8 86,29 86,71 50,92 14,71 14,29" />
+              <text x="50" y="58" textAnchor="middle" fontSize="20" fontWeight="bold" fill="white">Node</text>
+            </svg>
+          )
+        },
+        {
+          name: "Express.js",
+          slug: "express-js",
+          logo: (
+            <svg viewBox="0 0 100 100" className="skill-logo">
+              <rect x="14" y="22" width="72" height="56" rx="10" fill="#222" />
+              <text x="50" y="58" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#fff">Express</text>
             </svg>
           )
         }
@@ -83,6 +110,7 @@ function Skills() {
       skills: [
         { 
           name: "SQL", 
+          slug: "sql",
           logo: (
             <svg viewBox="0 0 100 100" className="skill-logo">
               <path fill="#336791" d="M20 30h60v40H20z"/>
@@ -93,6 +121,7 @@ function Skills() {
         },
         { 
           name: "MongoDB", 
+          slug: "mongodb",
           logo: (
             <svg viewBox="0 0 100 100" className="skill-logo">
               <defs>
@@ -113,6 +142,7 @@ function Skills() {
       skills: [
         { 
           name: "Git", 
+          slug: "git",
           logo: (
             <svg viewBox="0 0 100 100" className="skill-logo">
               <circle cx="35" cy="35" r="8" fill="none" stroke="#F1502F" strokeWidth="2"/>
@@ -125,6 +155,7 @@ function Skills() {
         },
         { 
           name: "GitHub", 
+          slug: "github",
           logo: (
             <svg viewBox="0 0 100 100" className="skill-logo">
               <path fill="#181717" d="M50 15c-19.3 0-35 15.7-35 35 0 15.5 10 28.6 23.8 33.2 1.7.3 2.3-.7 2.3-1.6v-5.7c-9.7 2.1-11.8-4.7-11.8-4.7-1.6-4-3.8-5-3.8-5-3.1-2.1.2-2.1.2-2.1 3.4.2 5.2 3.5 5.2 3.5 3 5.2 7.9 3.7 9.8 2.8.3-2.2 1.2-3.7 2.1-4.6-7.5-.8-15.4-3.8-15.4-16.8 0-3.7 1.3-6.8 3.5-9.2-.4-1-.1-2.3.3-5.6-1.1-.3-3.7 1.2-3.7 1.2-1.1-.3-2.3-.5-3.5-.5s-2.4.2-3.5.5c0 0-2.6-1.5-3.7-1.2.4 3.2.7 4.6.3 5.6 2.2 2.4 3.5 5.5 3.5 9.2 0 13-7.9 16-15.4 16.8 1 .8 1.9 2.3 1.9 4.6v6.8c0 .9.6 1.9 2.3 1.6C75 78.6 85 65.5 85 50c0-19.3-15.7-35-35-35z"/>
@@ -145,12 +176,12 @@ function Skills() {
             <h3 className="category-title">{group.category}</h3>
             <div className="skills-grid">
               {group.skills.map((skill, skillIndex) => (
-                <div key={skillIndex} className="skill-card">
+                <Link key={skillIndex} to={`/skills/${skill.slug}`} className="skill-card" aria-label={`Open ${skill.name} details`}>
                   <div className="skill-logo-wrapper">
                     {skill.logo}
                   </div>
                   <span className="skill-name">{skill.name}</span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
