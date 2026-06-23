@@ -120,7 +120,7 @@ function PortfolioHome() {
         new window.google.translate.TranslateElement(
           {
             pageLanguage: "en",
-            includedLanguages: "bg,hr,cs,da,nl,en,et,fi,fr,de,el,hu,ga,it,lv,lt,mt,pl,pt,ro,sk,sl,es,sv",
+            includedLanguages: "bg,hr,cs,da,nl,en,et,fi,fr,de,el,hu,ga,it,lv,lt,mt,pl,pt,ro,sk,sl,es,sv,zh-CN",
             autoDisplay: false
           },
           "google_translate_element"
@@ -247,6 +247,7 @@ function PortfolioHome() {
             <option value="sl" translate="no">Slovenian</option>
             <option value="es" translate="no">Spanish</option>
             <option value="sv" translate="no">Swedish</option>
+          <option value="zh-CN" translate="no">Chinese</option>
           </select>
           <span
             className={`language-status notranslate ${isTranslating ? "visible" : ""}`}

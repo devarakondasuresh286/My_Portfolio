@@ -34,6 +34,24 @@ function Projects() {
       technologies: ["React", "Vite", "CSS3", "JavaScript"],
       liveDemo: "#",
       github: "#"
+    },
+    {
+      id: 4,
+      title: "Smart Trip Planner",
+      description: "A desktop travel planner built with Java and JavaFX for itinerary planning, to-do tracking, budgeting, weather checks, and trip history in one clean app.",
+      image: "/images/smarttripplanner.png",
+      technologies: ["Java", "JavaFX", "Maven", "SQLite"],
+      liveDemo: "#",
+      github: "#"
+    },
+    {
+      id: 5,
+      title: "Expense Tracker",
+      description: "A simple web application to track daily expenses, manage spending, and view real-time summaries with an easy-to-use dashboard.",
+      image: "/images/expensive_tracker.png",
+      technologies: ["HTML", "CSS", "JavaScript", "React"],
+      liveDemo: "#",
+      github: "#"
     }
   ];
 

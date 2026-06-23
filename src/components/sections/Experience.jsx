@@ -9,33 +9,15 @@ function Experience() {
   const experiences = [
     {
       id: 1,
-      title: "My Portfolio",
-      year: "2026",
-      description: "Designed and developed my personal portfolio using React and Vite to showcase projects, skills, and professional work"
+      title: "Delivery",
+      year: "2023",
+      description: "Worked as a Full Stack Developer Intern, contributing to web application development, API integration, and database management."
     },
     {
       id: 2,
-      title: "About the People",
-      year: "2023",
-      description: "Worked on a news posting website, contributed as a team member, and developed key parts of the platform."
-    },
-    {
-      id: 3,
-      title: "Cafe Crew Member",
-      year: "2022",
-      description: "Prepared orders and maintained hygiene standards"
-    },
-    {
-      id: 4,
-      title: "Sales Intern",
-      year: "2021",
-      description: "Assisted sales team and managed customer inquiries"
-    },
-    {
-      id: 5,
-      title: "Warehouse Helper",
-      year: "2020",
-      description: "Organized inventory and supported logistics operations"
+      title: "AboutThePeople",
+      year: "2024",
+      description: "Contributed to full-stack web development, building responsive applications and supporting backend services as part of a development team."
     }
   ];
 

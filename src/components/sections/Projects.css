@@ -18,15 +18,19 @@
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
   gap: 2.5rem;
   width: 100%;
   max-width: 1200px;
-  padding: 0 20px;
+  padding: 0 20px 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .project-card {
+  flex: 0 0 min(360px, calc(100vw - 100px));
   background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
   border-radius: 16px;
   overflow: hidden;
@@ -34,6 +38,7 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fadeInUp 0.8s ease-out;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  scroll-snap-align: start;
 }
 
 .project-card:hover {
@@ -166,8 +171,11 @@
 
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .project-card {
+    flex-basis: calc(100vw - 90px);
   }
 
   .project-buttons {
