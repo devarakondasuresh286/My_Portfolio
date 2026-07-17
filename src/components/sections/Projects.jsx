@@ -10,46 +10,61 @@ function Projects() {
     {
       id: 1,
       title: "NestChange",
-      description: "A modern web application designed to simplify workflows, featuring responsive UI, real-time interactions, and scalable backend integration.",
+      description: "A home-exchange platform with secure user workflows and responsive web interfaces.",
       image: "/images/NestChange.png",
       technologies: ["JavaScript", "HTML", "CSS", "PHP", "SQL"],
+      showLiveDemo: false,
       liveDemo: "https://nestchange-production-5182.up.railway.app/",
-      github: "#"
+      github: "https://github.com/devarakondasuresh286/NestChange"
     },
     {
       id: 2,
-      title: "About the People",
-      description: "A news posting website where fresh content is published regularly. I developed this website and also worked as a team member in building and maintaining it.",
-      image: "/images/about the people.png",
-      imageClass: "contain-image",
-      technologies: ["React", "JavaScript", "HTML", "CSS", "Express.js", "Node.js", "MongoDB"],
+      title: "Onride Rentals",
+      description: "A full-stack vehicle rental platform with authentication, booking management, reviews, and an admin dashboard.",
+      image: "/images/Onriderentals.png",
+      technologies: ["React", "JavaScript", "HTML", "CSS", "Python", "FastAPI", "MySQL"],
+      showLiveDemo: false,
       liveDemo: "#",
-      github: "#"
+      github: "https://github.com/devarakondasuresh286/Onride_rentals"
     },
     {
       id: 3,
-      title: "My Portfolio",
-      description: "A modern, responsive portfolio website showcasing projects, skills, and professional experience with smooth animations.",
-      image: "/images/portfolio.png",
-      technologies: ["React", "Vite", "CSS3", "JavaScript"],
+      title: "Invoice VAT System",
+      description: "A backend REST API for invoice and VAT management with CRUD operations and tax calculation.",
+      image: "/images/invoice_vat_system.png",
+      technologies: ["Java", "Spring Boot", "Spring Security", "REST API", "Postman", "MySQL", "PostgreSQL"],
+      showLiveDemo: false,
       liveDemo: "#",
-      github: "#"
+      github: "https://github.com/devarakondasuresh286/invoicehub-backend"
     },
     {
       id: 4,
-      title: "Smart Trip Planner",
-      description: "A desktop travel planner built with Java and JavaFX for itinerary planning, to-do tracking, budgeting, weather checks, and trip history in one clean app.",
-      image: "/images/smarttripplanner.png",
-      technologies: ["Java", "JavaFX", "Maven", "SQLite"],
+      title: "My Portfolio",
+      description: "A responsive portfolio website showcasing projects, technical skills, and professional experience.",
+      image: "/images/portfolio.png",
+      technologies: ["React", "Vite", "CSS3", "JavaScript"],
+      showLiveDemo: true,
       liveDemo: "#",
       github: "#"
     },
     {
       id: 5,
-      title: "Expense Tracker",
-      description: "A simple web application to track daily expenses, manage spending, and view real-time summaries with an easy-to-use dashboard.",
-      image: "/images/expensive_tracker.png",
-      technologies: ["HTML", "CSS", "JavaScript", "React"],
+      title: "Smart Trip Planner",
+      description: "A desktop application for itinerary planning and route optimization with an interactive JavaFX interface.",
+      image: "/images/smarttripplanner.png",
+      technologies: ["Java", "JavaFX", "Maven", "SQLite"],
+      showLiveDemo: false,
+      liveDemo: "#",
+      github: "https://github.com/devarakondasuresh286/smart-trip-planner"
+    },
+    {
+      id: 6,
+      title: "About the People",
+      description: "A news publishing platform where users can browse and manage articles through a scalable full-stack architecture.",
+      image: "/images/about the people.png",
+      imageClass: "contain-image",
+      technologies: ["React", "JavaScript", "HTML", "CSS", "Express.js", "Node.js", "MongoDB"],
+      showLiveDemo: false,
       liveDemo: "#",
       github: "#"
     }
@@ -73,9 +88,11 @@ function Projects() {
                 ))}
               </div>
               <div className="project-buttons">
-                <a href={project.liveDemo} className="project-btn live-demo" target="_blank" rel="noopener noreferrer">
-                  Live Demo
-                </a>
+                {project.showLiveDemo && (
+                  <a href={project.liveDemo} className="project-btn live-demo" target="_blank" rel="noopener noreferrer">
+                    Live Demo
+                  </a>
+                )}
                 <a href={project.github} className="project-btn github" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>

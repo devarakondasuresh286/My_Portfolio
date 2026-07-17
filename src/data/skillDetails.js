@@ -1,206 +1,359 @@
 export const skillDetails = {
   html: {
     name: "HTML",
-    overview: "I use HTML to create semantic, accessible page structures that are clean, maintainable, and SEO-friendly.",
-    projects: ["Portfolio Website", "NestChange"],
+    overview: "I use HTML to build semantic page structures that keep content accessible, organized, and easy to extend.",
+    projects: ["NestChange", "Onride Rentals", "Invoice VAT System", "My Portfolio", "Smart Trip Planner", "About the People"],
     challenges: [
-      "Keeping markup semantic while building visually complex layouts.",
-      "Balancing content hierarchy and responsive structure across devices."
+      "Structuring pages with clear hierarchy for different content types.",
+      "Keeping markup flexible enough for responsive layouts and rich UI blocks."
     ],
     solutions: [
-      "Used meaningful elements like header, section, article, and nav for clearer structure.",
-      "Designed reusable layout blocks and tested in multiple breakpoints early."
+      "Used semantic elements to separate navigation, content, and supporting sections.",
+      "Kept markup consistent so styles and component updates stayed predictable."
     ],
     learnings: [
-      "Strong semantic HTML improves accessibility and long-term maintainability.",
-      "A solid document structure makes CSS and JS development faster."
+      "Good structure makes every later UI change easier to manage.",
+      "Semantic markup improves both accessibility and maintainability."
     ]
   },
   css: {
     name: "CSS",
-    overview: "I design responsive interfaces with modern CSS using layout systems, transitions, and reusable style patterns.",
-    projects: ["Portfolio Website", "About the People"],
+    overview: "I use CSS to shape responsive layouts, visual hierarchy, and polished interactions across my projects.",
+    projects: ["NestChange", "Onride Rentals", "Invoice VAT System", "My Portfolio", "About the People"],
     challenges: [
-      "Maintaining consistent spacing and alignment in complex sections.",
-      "Handling responsive behavior for translated content and long text labels."
+      "Maintaining visual consistency across varied sections and screen sizes.",
+      "Balancing detailed styling with reusable component-based layouts."
     ],
     solutions: [
-      "Applied clear spacing tokens and flexible layout rules.",
-      "Used media queries, wrapping strategies, and adaptive sizing for resilience."
+      "Used modular class patterns and spacing consistency to keep pages aligned.",
+      "Applied flexible layout rules so each section adapted cleanly to the viewport."
     ],
     learnings: [
-      "Design consistency comes from predictable spacing and component structure.",
-      "Responsive design should be planned early, not patched later."
+      "Consistent styling decisions improve the overall feel of a product.",
+      "Responsive CSS works best when it is planned with the layout from the start."
     ]
   },
   javascript: {
     name: "JavaScript",
-    overview: "I use JavaScript to add interactivity, dynamic rendering, and behavior logic for modern web experiences.",
-    projects: ["Portfolio Website", "NestChange"],
+    overview: "I use JavaScript to power interactivity, state changes, and data flow in browser-based experiences.",
+    projects: ["NestChange", "Onride Rentals", "My Portfolio", "About the People"],
     challenges: [
-      "Managing UI state transitions without introducing regressions.",
-      "Ensuring smooth interactions across browsers and screen sizes."
+      "Coordinating dynamic UI updates without introducing unexpected behavior.",
+      "Handling asynchronous logic cleanly across frontend and integration flows."
     ],
     solutions: [
-      "Separated concerns into focused functions and reusable handlers.",
-      "Tested interaction flows step-by-step after each feature addition."
+      "Split logic into focused functions and reused shared helpers where possible.",
+      "Kept data flow predictable so interface updates stayed easy to trace."
     ],
     learnings: [
-      "Small, clear functions make dynamic UI behavior easier to debug.",
-      "Event handling and state changes should always be predictable."
+      "Clear JavaScript structure reduces debugging time.",
+      "Small functions and stable state transitions make interactive apps more reliable."
     ]
   },
   react: {
     name: "React",
-    overview: "I build component-driven interfaces in React with reusable UI sections, state management, and clean composition.",
-    projects: ["Portfolio Website", "About the People"],
+    overview: "I use React to build reusable interfaces with component composition, state-driven rendering, and clean UI structure.",
+    projects: ["Onride Rentals", "My Portfolio", "About the People"],
     challenges: [
-      "Preventing re-render side effects when integrating animation and translation.",
-      "Keeping components reusable while scaling page complexity."
+      "Keeping components reusable while each page still felt tailored to the project.",
+      "Managing state and props cleanly as the interface grew."
     ],
     solutions: [
-      "Isolated state logic with hooks and guarded side effects in useEffect.",
-      "Split UI into focused components and shared data models."
+      "Broke pages into focused components with clear responsibilities.",
+      "Passed data through predictable props and kept side effects isolated."
     ],
     learnings: [
-      "Well-structured components make feature growth much faster.",
-      "Hook dependencies and side effects need careful design for stability."
+      "Component boundaries matter when a project starts to scale.",
+      "Well-structured React code is easier to test, extend, and reason about."
     ]
   },
   java: {
     name: "Java",
-    overview: "I use Java to implement reliable backend logic, object-oriented design, and service-driven application workflows.",
-    projects: ["NestChange", "About the People"],
+    overview: "I use Java for object-oriented application logic, desktop tools, and backend services with strong structure.",
+    projects: ["Invoice VAT System", "Smart Trip Planner"],
     challenges: [
-      "Designing maintainable service layers with clean separation of concerns.",
-      "Handling validation and error flows without duplicating logic."
+      "Organizing business rules so they stayed readable as features expanded.",
+      "Managing persistence and workflow logic without mixing responsibilities."
     ],
     solutions: [
-      "Used layered architecture patterns and centralized utility methods.",
-      "Added clear DTO and validation flow between controller and service layers."
+      "Used layered design to separate UI, domain, and data access concerns.",
+      "Kept service methods focused on one task at a time."
     ],
     learnings: [
-      "Strong architecture decisions reduce long-term code complexity.",
-      "Readable backend code is critical for team collaboration."
+      "Java rewards careful structure and consistent naming.",
+      "Clear class responsibilities make larger applications easier to maintain."
     ]
   },
   "spring-boot": {
     name: "Spring Boot",
-    overview: "I build REST APIs and backend modules in Spring Boot, focusing on clean architecture, data handling, and deployment readiness.",
-    projects: ["NestChange", "About the People"],
+    overview: "I use Spring Boot to build backend APIs with organized configuration, clean routing, and service-driven structure.",
+    projects: ["Invoice VAT System"],
     challenges: [
-      "Configuring application properties and environments safely.",
-      "Integrating APIs with frontend while maintaining consistent contracts."
+      "Keeping API setup manageable while the backend logic stayed modular.",
+      "Balancing environment configuration with code that remained easy to deploy."
     ],
     solutions: [
-      "Structured environment configuration and externalized sensitive settings.",
-      "Defined stable API response formats and validated them with frontend flows."
+      "Separated controllers, services, and repositories into clear layers.",
+      "Used external configuration to keep the application easier to maintain."
     ],
     learnings: [
-      "API consistency is essential for smooth full-stack integration.",
-      "Configuration management is as important as business logic quality."
+      "Spring Boot is strongest when conventions are followed consistently.",
+      "A clean backend structure makes future feature work much safer."
+    ]
+  },
+  "spring-security": {
+    name: "Spring Security",
+    overview: "I use Spring Security to protect backend routes and control access to sensitive application behavior.",
+    projects: ["Invoice VAT System"],
+    challenges: [
+      "Defining secure access rules without making the API awkward to use.",
+      "Keeping authentication and authorization logic easy to verify."
+    ],
+    solutions: [
+      "Structured security rules so protected endpoints were explicit and predictable.",
+      "Separated security concerns from business logic to keep the code readable."
+    ],
+    learnings: [
+      "Security works best when it is designed into the architecture early.",
+      "Clear access rules reduce both risk and maintenance effort."
+    ]
+  },
+  "rest-api": {
+    name: "REST API",
+    overview: "I design REST APIs with clear resources, consistent responses, and practical contracts for frontend and backend integration.",
+    projects: ["Invoice VAT System", "Onride Rentals"],
+    challenges: [
+      "Keeping endpoint behavior consistent across multiple features.",
+      "Making request and response structures easy for clients to consume."
+    ],
+    solutions: [
+      "Used resource-based routes and stable response shapes.",
+      "Applied validation and clear status handling to reduce integration issues."
+    ],
+    learnings: [
+      "Good API design is mostly about clarity and consistency.",
+      "Small contract changes can affect the whole application flow."
+    ]
+  },
+  python: {
+    name: "Python",
+    overview: "I use Python for backend development and application logic where concise, readable code helps move quickly.",
+    projects: ["Onride Rentals"],
+    challenges: [
+      "Keeping backend modules organized as the feature set expanded.",
+      "Handling request flow and validation cleanly in a service-oriented app."
+    ],
+    solutions: [
+      "Grouped related logic into small modules with clear responsibilities.",
+      "Kept functions direct so bugs were easier to isolate."
+    ],
+    learnings: [
+      "Readable Python makes backend work faster to review and maintain.",
+      "Simple module design helps prevent hidden coupling."
+    ]
+  },
+  fastapi: {
+    name: "FastAPI",
+    overview: "I use FastAPI to build fast, typed backend services with clear validation and modern API workflows.",
+    projects: ["Onride Rentals"],
+    challenges: [
+      "Structuring endpoints so they stayed easy to understand and extend.",
+      "Making request validation and response models consistent across the API."
+    ],
+    solutions: [
+      "Used typed request and response models to document behavior naturally.",
+      "Kept route handlers focused and moved business logic into separate layers."
+    ],
+    learnings: [
+      "Typed APIs make backend contracts much clearer.",
+      "FastAPI is strongest when routes stay small and purposeful."
+    ]
+  },
+  mysql: {
+    name: "MySQL",
+    overview: "I use MySQL for structured relational data, transactional workflows, and project data that needs reliable querying.",
+    projects: ["Onride Rentals", "Invoice VAT System"],
+    challenges: [
+      "Designing tables that matched the way the applications actually read data.",
+      "Keeping joins and lookups efficient as the dataset grew."
+    ],
+    solutions: [
+      "Normalized related tables and used practical relationships for the domain.",
+      "Added indexes around common queries to keep retrieval fast."
+    ],
+    learnings: [
+      "A clear schema prevents many downstream application issues.",
+      "Performance improves when the database design follows real usage patterns."
+    ]
+  },
+  postgresql: {
+    name: "PostgreSQL",
+    overview: "I use PostgreSQL for structured backend data where strong relational features and reliable constraints matter.",
+    projects: ["Invoice VAT System"],
+    challenges: [
+      "Keeping financial data accurate across inserts and updates.",
+      "Maintaining predictable SQL behavior for business calculations."
+    ],
+    solutions: [
+      "Used strong column types and consistent schema design for key entities.",
+      "Kept SQL logic focused so tax and invoice rules stayed easy to follow."
+    ],
+    learnings: [
+      "PostgreSQL is a strong fit for structured business data.",
+      "Careful schema design supports both correctness and long-term flexibility."
     ]
   },
   "node-js": {
     name: "Node.js",
-    overview: "I use Node.js to build backend services, handle server-side logic, and support scalable API-driven applications.",
+    overview: "I use Node.js for server-side logic, API support, and application layers that need asynchronous execution.",
     projects: ["About the People"],
     challenges: [
-      "Structuring backend modules to keep code maintainable as features grow.",
-      "Handling async operations cleanly without introducing unstable flows."
+      "Keeping the backend codebase organized as the project evolved.",
+      "Managing asynchronous operations without making the flow hard to follow."
     ],
     solutions: [
-      "Organized server code by feature and separated route, service, and data access responsibilities.",
-      "Used async patterns consistently with clear error handling across API endpoints."
+      "Separated responsibilities into route, service, and data access layers.",
+      "Used consistent async patterns with explicit error handling."
     ],
     learnings: [
-      "Consistent backend structure improves development speed and debugging.",
-      "Clear async flow design makes APIs more reliable under real usage."
+      "A clean Node structure makes APIs easier to extend.",
+      "Async code stays maintainable when each layer has a clear job."
     ]
   },
   "express-js": {
     name: "Express.js",
-    overview: "I use Express.js to create REST APIs, route requests cleanly, and connect frontend features to backend services.",
+    overview: "I use Express.js to build routing layers and REST endpoints with modular server structure.",
     projects: ["About the People"],
     challenges: [
-      "Designing route and middleware layers that remain easy to scale.",
-      "Keeping request validation and response formats consistent across endpoints."
+      "Keeping route definitions readable as the API grew.",
+      "Handling errors and request validation in a consistent way."
     ],
     solutions: [
-      "Applied modular routing and reusable middleware for authentication and validation.",
-      "Standardized API responses and error patterns to simplify frontend integration."
+      "Organized routes into feature-based modules for clarity.",
+      "Used shared middleware patterns to keep endpoint behavior uniform."
     ],
     learnings: [
-      "Middleware design has a big impact on API maintainability.",
-      "Consistent endpoint contracts reduce integration bugs significantly."
-    ]
-  },
-  sql: {
-    name: "SQL",
-    overview: "I use SQL for relational data modeling, querying, and performance-oriented data access patterns.",
-    projects: ["NestChange"],
-    challenges: [
-      "Designing query logic that remains readable and performant.",
-      "Managing joins and relationships as data models evolve."
-    ],
-    solutions: [
-      "Optimized frequently used queries and simplified table relationships.",
-      "Maintained naming consistency and clear schema evolution practices."
-    ],
-    learnings: [
-      "Good schema design prevents many downstream performance issues.",
-      "Readable SQL is easier to optimize and maintain."
+      "Express becomes easier to manage when routes stay small.",
+      "Middleware design has a big impact on backend maintainability."
     ]
   },
   mongodb: {
     name: "MongoDB",
-    overview: "I use MongoDB for flexible document-based data storage in features that benefit from schema agility.",
+    overview: "I use MongoDB for flexible document storage in projects that benefit from schema agility.",
     projects: ["About the People"],
     challenges: [
-      "Choosing the right document structure for future feature growth.",
-      "Avoiding over-nesting while preserving query efficiency."
+      "Choosing document structures that supported publishing workflows.",
+      "Keeping reads efficient without over-complicating nested data."
     ],
     solutions: [
-      "Modeled collections around access patterns and practical use cases.",
-      "Kept documents focused and indexed key fields for frequent queries."
+      "Modeled collections around the actual article and user access patterns.",
+      "Kept documents focused and indexed fields used often in queries."
     ],
     learnings: [
-      "Document design should follow read/write patterns, not assumptions.",
-      "Indexes must be planned around real query usage."
+      "Document design should follow how the app reads data.",
+      "Indexes are most effective when they match real usage."
+    ]
+  },
+  php: {
+    name: "PHP",
+    overview: "I use PHP for server-side functionality in web applications that need simple, direct backend logic.",
+    projects: ["NestChange"],
+    challenges: [
+      "Keeping legacy-style server code organized and readable.",
+      "Separating form handling, logic, and persistence cleanly."
+    ],
+    solutions: [
+      "Split the code into focused sections for data handling and page flow.",
+      "Kept the backend logic straightforward so changes were easier to test."
+    ],
+    learnings: [
+      "PHP can stay maintainable when responsibilities are kept simple.",
+      "Clear structure matters even in smaller server-side projects."
+    ]
+  },
+  sql: {
+    name: "SQL",
+    overview: "I use SQL for relational modeling, queries, and data access in projects that depend on structured storage.",
+    projects: ["NestChange"],
+    challenges: [
+      "Writing queries that stayed readable while still doing the job well.",
+      "Managing relationships and joins without making the data layer confusing."
+    ],
+    solutions: [
+      "Kept queries focused and used consistent naming across the schema.",
+      "Optimized only the parts of the data flow that were used often."
+    ],
+    learnings: [
+      "Good SQL is both precise and easy to revisit later.",
+      "Schema choices strongly affect application performance and clarity."
+    ]
+  },
+  javafx: {
+    name: "JavaFX",
+    overview: "I use JavaFX to build desktop interfaces with event-driven controls and interactive layouts.",
+    projects: ["Smart Trip Planner"],
+    challenges: [
+      "Managing multiple screens and interactive states in a desktop app.",
+      "Keeping the interface responsive while handling travel-planning logic."
+    ],
+    solutions: [
+      "Used focused views and event handlers to keep the UI organized.",
+      "Separated presentation logic from trip data and calculations."
+    ],
+    learnings: [
+      "Desktop apps benefit from small, well-defined UI sections.",
+      "Event-driven design works best when logic stays modular."
+    ]
+  },
+  sqlite: {
+    name: "SQLite",
+    overview: "I use SQLite for lightweight local persistence in desktop applications that need simple and reliable storage.",
+    projects: ["Smart Trip Planner"],
+    challenges: [
+      "Keeping local storage simple while supporting app features cleanly.",
+      "Structuring queries for fast access inside a desktop workflow."
+    ],
+    solutions: [
+      "Designed a compact schema around the planner’s core entities.",
+      "Used direct queries that matched the application’s real usage patterns."
+    ],
+    learnings: [
+      "SQLite is a practical choice for focused local applications.",
+      "Simple schemas make desktop persistence easier to maintain."
     ]
   },
   git: {
     name: "Git",
-    overview: "I use Git for version control, feature branching, and clean change tracking across portfolio and team projects.",
-    projects: ["Portfolio Website", "About the People", "NestChange"],
+    overview: "I use Git to track changes, manage branches, and keep project history clean across every project I build.",
+    projects: ["NestChange", "Onride Rentals", "Invoice VAT System", "My Portfolio", "Smart Trip Planner", "About the People"],
     challenges: [
-      "Avoiding merge conflicts in active parallel development.",
-      "Keeping commit history clear and meaningful."
+      "Keeping work isolated while features were moving in parallel.",
+      "Making commit history easy to understand when projects changed quickly."
     ],
     solutions: [
-      "Used focused branches and regular pull/rebase workflows.",
-      "Wrote structured commit messages and grouped logical changes."
+      "Worked in focused branches and merged only when changes were ready.",
+      "Used small, descriptive commits to keep the history easy to follow."
     ],
     learnings: [
-      "Good Git hygiene speeds up collaboration and debugging.",
-      "Small, focused commits are easier to review and revert."
+      "Good Git habits make collaboration and recovery much easier.",
+      "Branch discipline helps protect unfinished work."
     ]
   },
   github: {
     name: "GitHub",
-    overview: "I use GitHub for repository hosting, collaboration, issue tracking, and deployment workflows.",
-    projects: ["Portfolio Website", "About the People", "NestChange"],
+    overview: "I use GitHub to host repositories, share progress, and manage collaboration across my portfolio projects.",
+    projects: ["NestChange", "Onride Rentals", "Invoice VAT System", "My Portfolio", "Smart Trip Planner", "About the People"],
     challenges: [
-      "Organizing project updates clearly for collaborators.",
-      "Maintaining high visibility of progress and feature status."
+      "Keeping project history and repository updates easy to review.",
+      "Presenting work clearly across multiple repos and feature sets."
     ],
     solutions: [
-      "Used clear README updates, pull requests, and issue linking.",
-      "Created clean branch and merge routines for safer releases."
+      "Used repository structure and commits that made changes easy to inspect.",
+      "Kept project information organized so progress was easier to track."
     ],
     learnings: [
-      "Transparent collaboration improves both speed and code quality.",
-      "Documentation and pull request quality matter for team efficiency."
+      "Public repository hygiene improves both collaboration and presentation.",
+      "Good repo organization makes portfolio work easier to trust."
     ]
   }
 };
@@ -212,10 +365,19 @@ export const skillOrder = [
   "react",
   "java",
   "spring-boot",
+  "spring-security",
+  "rest-api",
+  "python",
+  "fastapi",
+  "mysql",
+  "postgresql",
   "node-js",
   "express-js",
-  "sql",
   "mongodb",
+  "php",
+  "sql",
+  "javafx",
+  "sqlite",
   "git",
   "github"
 ];
