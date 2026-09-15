@@ -102,6 +102,16 @@ function Skills() {
               <text x="50" y="58" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#fff">Express</text>
             </svg>
           )
+        },
+        {
+          name: "Python",
+          slug: "python",
+          logo: (
+            <svg viewBox="0 0 100 100" className="skill-logo" aria-hidden="true">
+              <path fill="#3776AB" d="M49 10c-16 0-15 7-15 7v10h15v3H28c-16 0-15 15-15 15s0 15 15 15h9V50c0-8 7-15 15-15h15V20c0-8-7-10-18-10zm-9 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
+              <path fill="#FFD43B" d="M51 90c16 0 15-7 15-7V73H51v-3h21c16 0 15-15 15-15s0-15-15-15h-9v10c0 8-7 15-15 15H33v15c0 8 7 10 18 10zm9-10a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+            </svg>
+          )
         }
       ]
     },

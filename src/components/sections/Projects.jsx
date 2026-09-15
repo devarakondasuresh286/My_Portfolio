@@ -44,7 +44,7 @@ function Projects() {
       image: "/images/portfolio.png",
       technologies: ["React", "Vite", "CSS3", "JavaScript"],
       showLiveDemo: true,
-      liveDemo: "#",
+      liveDemo: "https://my-portfolio-coral-six-33.vercel.app/",
       github: "#"
     },
     {
@@ -60,13 +60,20 @@ function Projects() {
     {
       id: 6,
       title: "About the People",
-      description: "A news publishing platform where users can browse and manage articles through a scalable full-stack architecture.",
       image: "/images/about the people.png",
       imageClass: "contain-image",
-      technologies: ["React", "JavaScript", "HTML", "CSS", "Express.js", "Node.js", "MongoDB"],
+    },
+    {
+      id: 7,
+      title: "Shopify Product Extractor",
+      category: "Full Stack Web Application",
+      description: "Full-stack Shopify product extraction app built with FastAPI and React, with JSON/CSV exports and robust fallback parsing.",
+      image: "/images/shopify.png",
+      technologies: ["Python", "FastAPI", "React", "JavaScript", "BeautifulSoup", "Requests", "HTML", "CSS"],
+      features: ["Shopify product extraction", "Automatic HTML & JSON-LD fallback", "Product metadata extraction", "JSON & CSV export", "Responsive React UI", "Retry and rate-limit handling", "Size guide detection", "MVC backend architecture", "Docker support", "Pytest testing", "GitHub Actions CI"],
       showLiveDemo: false,
       liveDemo: "#",
-      github: "#"
+      github: "https://github.com/devarakondasuresh286/shopify-data-extractor"
     }
   ];
 
@@ -81,22 +88,30 @@ function Projects() {
             </div>
             <div className="project-content">
               <h3 className="project-title">{project.title}</h3>
-              <p className="project-description">{project.description}</p>
-              <div className="project-technologies">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="tech-badge">{tech}</span>
-                ))}
-              </div>
-              <div className="project-buttons">
-                {project.showLiveDemo && (
-                  <a href={project.liveDemo} className="project-btn live-demo" target="_blank" rel="noopener noreferrer">
-                    Live Demo
-                  </a>
-                )}
-                <a href={project.github} className="project-btn github" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-              </div>
+              {project.description && (
+                <p className="project-description">{project.description}</p>
+              )}
+              {project.technologies && (
+                <div className="project-technologies">
+                  {project.technologies.map((tech, index) => (
+                    <span key={index} className="tech-badge">{tech}</span>
+                  ))}
+                </div>
+              )}
+              {(project.showLiveDemo || project.github) && (
+                <div className="project-buttons">
+                  {project.showLiveDemo && (
+                    <a href={project.liveDemo} className="project-btn live-demo" target="_blank" rel="noopener noreferrer">
+                      Live Demo
+                    </a>
+                  )}
+                  {project.github && (
+                    <a href={project.github} className="project-btn github" target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         ))}
