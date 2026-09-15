@@ -58,12 +58,6 @@ function Projects() {
       github: "https://github.com/devarakondasuresh286/smart-trip-planner"
     },
     {
-      id: 6,
-      title: "About the People",
-      image: "/images/about the people.png",
-      imageClass: "contain-image",
-    },
-    {
       id: 7,
       title: "Shopify Product Extractor",
       category: "Full Stack Web Application",
